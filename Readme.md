@@ -1,5 +1,7 @@
 I have created a solution that addresses all of the requirements in the list of instructions.
 
+NOTE: Connection string for SQL Express instance will need to be added in the BookingContext.cs file.
+
 Firstly the app is very rough around the edges, due to the fact that when developing I like to just get all of my
 logic and work flow down first and then once that is in place go back and refactor the code bit by bit 
 to make cleaner and compliant with the solid principles, whilst also beggining to work on writing unit 
@@ -30,7 +32,9 @@ are trying to delete to ensure that they are not able to delete a booking that s
 If I had more time to work on this app: 
 - I would create a separate BookingService class to actually process bookings, and a BookingRepository 
   that would be responsible for read/write database calls, this separates the responsibility from 
-  everything being done in the Program.cs file (SRP).
+  everything being done in the Program.cs file (SRP). Had trouble creating this because the Static Main() method
+  is required, and that can only call other static methods, but have included the files anyway to demonstrate how 
+  dependency injection would have been used in an ideal solution.
 - Unit tests: where I stopped with this app is usually the point at which I would start developing unit
   tests, so that I could begin the refactoring of code and ensuring that scenarios that were passing 
   before are still passing.

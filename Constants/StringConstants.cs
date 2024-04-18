@@ -2,7 +2,7 @@
 {
     public static class StringConstants
     {
-        public const string OptionsMessage = "Enter 'find' to find a free booking for a day, 'add' to add a new booking for a day, delete to remove a booking for a day, or 'keep' to keep a timeslot for a day:";
+        public const string OptionsMessage = "Enter 'find' to find a free booking for a day, 'add' to add a new booking for a day, 'delete' to remove a booking for a day, or 'keep' to keep a timeslot for a day:";
         public const string AddMessage = "Please enter the booking time in the format of DD-MM hh:mm that you would like to book - All apointments are 30mins in length:";
         public const string DeleteMessage = "Please enter the booking time in DD/MM hh:mm that you would like to delete:";
         public const string FindMessage = "Please enter the date in DD/MM to find available bookings:";

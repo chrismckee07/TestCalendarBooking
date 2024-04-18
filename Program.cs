@@ -54,7 +54,7 @@ class Program
     }
 
     /// <summary>
-    /// Add new Booking
+    /// Asks user to supply a date and time and attempts to create a booking based on that, if unsuccessful suitable error is returned
     /// </summary>
     /// <param name="context"></param>
     static void AddBooking(BookingContext context, string[] allowedTimes)
@@ -98,7 +98,7 @@ class Program
     }
 
     /// <summary>
-    /// Delete a booking
+    /// Attempts to delete a booking that was created previously, assuming that it was created by the same user
     /// </summary>
     /// <param name="context"></param>
     static void DeleteBooking(BookingContext context)
@@ -154,7 +154,7 @@ class Program
     }
 
     /// <summary>
-    /// Find available booking slots
+    /// Returns a list of all available booking slots for a given day
     /// </summary>
     /// <param name="context"></param>
     static void FindAvailableBookings(BookingContext context, string[] allowedTimes)
@@ -183,12 +183,11 @@ class Program
     }
 
     /// <summary>
-    /// Keep a recurring timeslot on all days
+    /// Attempts to keep a recurring timeslot on all days, will return error if existing booking exists on any day
     /// </summary>
     /// <param name="context"></param>
     static void KeepBooking(BookingContext context, string[] allowedTimes)
     {
-        //TODO: flakey
         Console.WriteLine(StringConstants.KeepMessage);
         var bookingTime = Console.ReadLine();
 
